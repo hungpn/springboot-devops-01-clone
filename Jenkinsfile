@@ -1,8 +1,14 @@
 pipeline {
     agent { 
-        node {
-            label 'docker-agent-dind'
+        //node {
+        //    label 'docker-agent-dind'
+        //}
+
+        docker {
+            image 'docker:latest'
+            args '-v /var/run/docker.sock:/var/run/docker.sock'
         }
+        
       }
     stages {
         stage('Hello') {
