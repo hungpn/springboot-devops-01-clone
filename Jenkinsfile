@@ -15,7 +15,6 @@ pipeline {
             steps {
                 echo "start"
                 sh '''
-                    sleep 600000
                     docker build -t test-java:1.0.0 .
                 '''
             }
