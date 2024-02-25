@@ -5,7 +5,7 @@ pipeline {
         //}
 
         docker {
-            image 'docker:latest'
+            image 'docker:25.0-dind'
             args '-v /var/run/docker.sock:/var/run/docker.sock'
         }
         
